@@ -1,0 +1,96 @@
+george.freire85@gmail.com
+
+https://gitfichas.com - dicas de comandos git  
+
+1. Baixar Git - (https://git-scm.com)
+2. Instalar node.js
+	- Node.js é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript fora de um navegador web.
+	- O Node.js possui o gerenciador com inúmeros pacotes e software reusável NPM (Node Package Manager), dando ao interpretador um potencial a ser utilizada em qualquer situação.
+	- Voltado para projetos Web
+3. Instalar Git PC
+	- Ferramenta para controle de versionamento. Plataforma online onde vc pode criar repositórios e hospedar neles nossos projetos e arquivos.
+	- Abrir CMD: git --version (certificar instalação do git)
+4. Criar uma conta no GitHub (https://github.com/)
+	- GitHub: uma rede social de codigos. Trabalha diretamente com Git.
+5. Configuração:
+	- git config --global --list (lista de configuração dentro do GIT);
+	- git config --global user.name "nome" (inserindo um usuário para o Git saber de onde vem);
+	- Comandos: touch nome do arquivo.txt (irá criar um arquivo); (touch é um comando para Linux, para windows deve-se usar ni nome do arquivo.txt);
+	- Comandos: rm nome do arquivo (irá remover um arquivo)
+				rmdir nome da pasta (irá remover um diretório)
+				mkdir nome da pasta (irá criar uma nova pasta)
+
+	
+#Criando Repositórios#
+
+	1. Via GitHub:
+		- Abrir GitHub
+		- Clicar em New e em seguida preencheer formulário (selecionar a opção "READme")
+		- Clicar em Code e copiar repositorio
+		- Criar uma pasta no PC e em seguida, no local da pasta, abrir com o GitBash
+		- no GitBash, executar o comando: git clone 'nome do repositorio' (vai conectar repositorio da nuvem ao PC)
+			- Para certificar que o repositório foi criado, verificar na pasta criada no PC em 'arquivos ocultos'.git
+		- Para acessar a Main (a branch principal), acessar a pasta recem clonada pelo GitBash, ou fechar e abrir o GitBash na pasta
+		- Na Branch principal do projeto, executar o comando: git status (verificar status repositório) 
+	
+	#Entendendo o funcionamento do Git ao adicionar um arquivo qualquer:
+		Primeiro no diretório de trabalho (PC): - Arquivos Modificados/Adicionados/Excluídos
+		Segundo, é a preparação dos arquivos a serem versionados. Após o comando "git add", os arquivos vão para uma "area de preparação"
+		Terceiro e último, o repositório remoto, o arquivo realmente salvo onde poderá ser versionado. Para isso precisamos "comitar" os arquivos. "git commit -m'"
+	
+	#Adicionando Primeiro Arquivo:
+		- Na pasta do PC, criar um arquivo qualquer e salvar
+		- No GitBash, executar o comando: git status (verás que será exibido o arquivo recem criado)
+		- Ainda no GitBash, executar o comando: git add "nome arquivo" (adicionar arquivo para a area de preparação)
+		- Comando git add . (vai adicionar todos os arquivos pendentes, ao inves de 1 a 1)
+		- Executar o comando: git commit -m comentario (preparar o arquivo para ser versionado)
+		- Executar o comando: git push origin main (main é o nome da Branch) (esse comando irá enviar os arquivos para a núvem, para o GitHub)
+			- Confirmar no GitHub arquivo adicionado
+			obs.: 
+				1. Ao alterar o conteúdo do arquivo pelo GitHub, deverá executar o comando: git pull origin main (main é o nome da Branch) (esse comando irá trazer as alterações da 
+			núvem para o meu PC)
+				2. Ao alterar o arquivo pelo PC, obrigatoriamente, no GitBash, adicionar o arquivo novamente, "comitar" e enviar para o repositório na núvem
+				git add "nome arquivo" >> git commit -m >> git push origin main
+				
+				
+	2. Da máquina para o GitHub:
+	
+		1. Criar a pasta no pc
+		2. Dentro de pasta, abrir com GitBash
+		3. Executar o comando "git init" - ele vai iniciar o repositório. Deve exibir a brach (Master)
+			- Para certificar que o repositório foi criado, verificar na pasta criada no PC em 'arquivos ocultos'.git
+		4. Criar o arquivo de leitura (readme)
+		4. Ir ao GitHub e criar um repositorio (sem marcar readme)
+		5. Inserir o primeiro arquivo no repositório, depois com o GitBash, adicionar os arquivos e depois comitar
+		6. Ainda no Gitbash, alterar o nome da branch de Master para Main (git branch -M main)
+		7. Conectar nosso novo repositório criado no pc com a nuven (git remote add origin 'endereco do repositorio')
+		8. Depois de conectado, subir o repositorio no github: git push origin main
+		9. Acessar repositório no site GitHub
+#Branch:
+	- São ramificações do projeto. Criar uma nova ramificação do projeto, mas sem alterar o main principal. Preservando-a.
+	- Criando uma Branch:
+		1. no GitBash, executar o comando: git branch 'nome'
+		2. Para visualizar branch executar o comando: git branch
+		3. Acessar a branch, executar comando: git checkout 'branch'
+		4. Eu posso criar alterações no codigo sem alterar o principal atraves duma branch. Caso minhas alterações no Branch estejam prontas para subir a main, executo o 
+			git merge 'nome da branch'
+		5. Após fazer o merge, executar o push para jogar as alteraçõs da maquina local para a remota. git push origin 'branch'
+	
+#Comandos GIT:
+
+	* git clone 'link repositorio': clonar repositório para se conectar da núvem ao PC
+	* git status: verificar situação do repositório
+	* git add "nome arquivo" / add .: adicionar arquivos na área de preparação
+	* git log: verificar os logs/commits dos arquivos/projetos
+	* git commit -m "mensagem": preparar arquivo que está na área de preparação para ser versionado
+	* git push origin main: empurrar nossos arquivos na núvem do branch especiificado 
+	* git pull origin main: ao alterar meus arquivos no repositório, preciso trazer do PC para a núvem
+	* git init: iniciar o repositório
+	* git branch -M 'nome da branch': alterar o acesso a branch
+	* git branch: visualizar a branch 
+	* git checkout 'branch': acessar a branch específica
+	* git remote and origin 'endereço repositório': conectar repositório do PC com a núvem 
+	* git merge 'nome da branch': ao alterar meu código na branch criada e subir para a minha main
+	
+	
+	
