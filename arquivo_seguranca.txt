@@ -91,6 +91,9 @@ https://gitfichas.com - dicas de comandos git
 	* git checkout 'branch': acessar a branch específica
 	* git remote and origin 'endereço repositório': conectar repositório do PC com a núvem 
 	* git merge 'nome da branch': ao alterar meu código na branch criada e subir para a minha main
+
+
+Alterando apenas esse arquivo
 	
 	
 	
